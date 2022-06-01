@@ -22,18 +22,3 @@ app.listen(port, () => {
 	console.log(`Server listening on port ${port}`)
 })
 
-// eslint-disable-next-line no-unused-vars
-const Task = require('./models/task')
-const User = require('./models/user')
-
-const main = async () => {
-// 	const task = await Task.findById('62958522c742aaffd8af6529')
-// 	await task.populate('owner').execPopulate()
-// 	console.log(task.owner)
-
-	const user = await User.findById('62958505c742aaffd8af6523')
-	await user.populate('tasks').execPopulate()
-	console.log(user.tasks)	
-}
-
-main()

@@ -47,6 +47,8 @@ const userSchema = new mongoose.Schema({
 			required: true
 		}
 	} ]
+},{
+	timestamps: true
 })
 
 // join 2 collection
