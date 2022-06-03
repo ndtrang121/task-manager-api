@@ -5,6 +5,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "3.6",
     "mongoose": "^5.13.14",
+    "multer": "^1.4.5-lts.1",
+    "node-mailjet": "^3.4.1",
+    "sharp": "^0.30.6",
     "validator": "^13.7.0"
   },
   "name": "task-manager",
@@ -12,12 +15,13 @@
   "version": "1.0.0",
   "main": "mongodb.js",
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "eslint": "^8.15.0",
     "nodemon": "^2.0.16"
   },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "env-cmd -f ./config/dev.env nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
